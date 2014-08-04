@@ -3,19 +3,19 @@
     
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-ng-init="navCollapsed = true" data-ng-click="navCollapsed = !navCollapsed">
+            <button type="button" class="navbar-toggle" data-ng-click="nav.navCollapsed = !nav.navCollapsed">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#" data-ng-click="navLink.selectTab(1)">Project name</a>
+            <a class="navbar-brand" href="#" data-ng-click="nav.makeActive(1)">Project name</a>
         </div>
-        <div class="navbar-collapse collapse navbar-right" data-ng-class="!navCollapsed && 'in'" data-ng-click="navCollapsed=true">
+        <div class="navbar-collapse collapse navbar-right" data-ng-class="!nav.navCollapsed && 'in'" data-ng-click="nav.navCollapsed=true">
             <ul class="nav navbar-nav">
-                <li data-ng-class="{ active: navLink.isSelected(1) }"><a href="#" data-ng-click="navLink.selectTab(1)">Home</a></li>
-                <li data-ng-class="{ active: navLink.isSelected(2) }"><a href="#/view2" data-ng-click="navLink.selectTab(2)">View 2</a></li>
-                <li data-ng-class="{ active: navLink.isSelected(3) }"><a href="#/view3" data-ng-click="navLink.selectTab(3)">View 3</a></li>
+                <li data-ng-class="{ active: nav.isActive(1) }"><a href="#" data-ng-click="nav.makeActive(1)">Home</a></li>
+                <li data-ng-class="{ active: nav.isActive(2) }"><a href="#/view2" data-ng-click="nav.makeActive(2)">View 2</a></li>
+                <li data-ng-class="{ active: nav.isActive(3) }"><a href="#/view3" data-ng-click="nav.makeActive(3)">View 3</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

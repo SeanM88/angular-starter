@@ -15,15 +15,16 @@
 	    restrict: 'E',
 	    templateUrl: 'partials/navigation.html',
 	    controller: function() {
-                this.tab = 1;
-                this.selectTab = function(setTab) {
-                    this.tab = setTab;
+		this.navCollapsed = true;
+                this.active = 1;
+                this.makeActive = function(setActive) {
+                    this.active = setActive;
                 };
-                this.isSelected = function(checkTab) {
-                    return this.tab === checkTab;
+                this.isActive = function(checkActive) {
+                    return this.active === checkActive;
                 };
 	    },
-	    controllerAs: 'navLink'
+	    controllerAs: 'nav'
 	}
     });
 
